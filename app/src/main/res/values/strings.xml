@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Presentation</string>
+    <string name="app_name">YouTube on Display</string>
+    <string name="select">Select</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
 </resources>
