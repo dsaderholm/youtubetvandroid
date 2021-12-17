@@ -115,7 +115,7 @@ class MyBrowser extends WebViewClient {
 }
 class AdBlocker {
 
-    private static final String AD_HOSTS_FILE = "";
+    private static final String AD_HOSTS_FILE = "https://raw.githubusercontent.com/catsdgs/youtubetvandroid/master/hosts.txt";
     private static final Set<String> AD_HOSTS = new HashSet<>();
 
     public static void init(final Context context) {
