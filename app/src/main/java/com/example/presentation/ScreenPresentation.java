@@ -37,6 +37,7 @@ public class ScreenPresentation extends Presentation {
     public ScreenPresentation(Context outerContext, Display display) {
         super(outerContext, display);
     }
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +65,7 @@ public class ScreenPresentation extends Presentation {
             public void onPageFinished(final WebView webView, String url) {
                 Handler handler = new Handler();
                 handler.postDelayed(() -> {
-                    if(!alreadyExecuted[0]) {
+                    if (!alreadyExecuted[0]) {
                         webView.requestFocus();
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_LEFT));
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
@@ -76,21 +77,22 @@ public class ScreenPresentation extends Presentation {
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_RIGHT));
                         alreadyExecuted[0] = true;
-                    }
-                    else if(!alreadyExecutedAgain[0]) {
+                    } else if (!alreadyExecutedAgain[0]) {
                         webView.requestFocus();
+                        android.os.SystemClock.sleep(1500);
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         alreadyExecutedAgain[0] = true;
                     }
-                }, 5000);
+                }, 2500);
             }
 
         });
     }
 }
+
 class MyBrowser extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -98,7 +100,8 @@ class MyBrowser extends WebViewClient {
         return true;
     }
 
-    private Map<String, Boolean> loadedUrls = new HashMap<>();
+    private final Map<String, Boolean> loadedUrls = new HashMap<>();
+
     @Nullable
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
@@ -113,6 +116,7 @@ class MyBrowser extends WebViewClient {
                 super.shouldInterceptRequest(view, url);
     }
 }
+
 class AdBlocker {
 
     private static final String AD_HOSTS_FILE = "https://raw.githubusercontent.com/catsdgs/youtubetvandroid/master/hosts.txt";
@@ -146,7 +150,7 @@ class AdBlocker {
 
     public static boolean isAd(String url) {
         try {
-            return isAdHost(getHost(url))||AD_HOSTS.contains(Uri.parse(url).getLastPathSegment());
+            return isAdHost(getHost(url)) || AD_HOSTS.contains(Uri.parse(url).getLastPathSegment());
         } catch (MalformedURLException e) {
             Log.d("Ind", e.toString());
             return false;
