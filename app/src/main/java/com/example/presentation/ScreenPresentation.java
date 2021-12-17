@@ -85,7 +85,7 @@ public class ScreenPresentation extends Presentation {
                         dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DPAD_DOWN));
                         alreadyExecutedAgain[0] = true;
                     }
-                }, 3000);
+                }, 5000);
             }
 
         });
