@@ -5,10 +5,8 @@ import android.hardware.display.DisplayManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
-import android.view.KeyEvent;
 
 public class MainActivity extends AppCompatActivity {
-//    Button navigateUp, navigateDown, navigateLeft, navigateRight, select;
     private DisplayManager displayManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
