@@ -1,6 +1,6 @@
 # YouTube TV on Android / YouTube on Display
 
-This Android app uses the rarely used Presentation API to display the YouTube smart TV web app on any external display. Displays can be HDMI, MiraCast, Google Cast, or even (my favorite), DisplayLink.
+An Android app that uses the rarely used Presentation API to display the YouTube smart TV web app on any external display. Displays can be HDMI, MiraCast, Google Cast, or even (my favorite), DisplayLink.
 
 ## Description
 
