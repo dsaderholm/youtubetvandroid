@@ -22,7 +22,7 @@ This app can be built using Android Studio. You can simply connect your external
 
 ### Executing program
 
-* The app can simply be openend and then closed allowing you to open the regular app as explained above.
+* The app can simply be opeend and then closed allowing you to open the regular app as explained above.
 
 ## Planned Features
 
