@@ -26,7 +26,7 @@ This app can be built using Android Studio. You can simply connect your external
 
 ## Planned Features
 
-* Ad Blocking (attempted, but hard to implement in WebView
+* Ad Blocking (attempted, but hard to implement in WebView)
 
 ## Known Issues
 
