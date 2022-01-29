@@ -4,7 +4,7 @@ An Android app that uses the rarely used Presentation API to display the YouTube
 
 ## Description/Guide
 
-This app can be built using Android Studio. You can simply connect your external display and open the app. The "Link with TV Code" screen should show up on your external display in a few seconds. You can then open your regular YouTube app and cast using the TV code. Then you can watch any YouTube video on your connected screeN!
+This app can be built using Android Studio. You can simply connect your external display and open the app. The "Link with TV Code" screen should show up on your external display in a few seconds. You can then open your regular YouTube app and cast using the TV code. Then you can watch any YouTube video on your connected screen!
 
 ## Getting Started
 
